@@ -9,13 +9,16 @@ import { BrowserRouter } from 'react-router-dom';
 import Profile from './Components/profile';
 import About from './Components/About';
 
+
+import Experience from './Components/Experience';
+
 const theme = createTheme({
   palette: {
     primary: {
       main: '#d8bfd8', // Change the primary color to green
     },
-   secondary: {
-  main: '#7e21ce', // Change the secondary color to red
+    secondary: {
+      main: '#7e21ce', // Change the secondary color to red
     },
   },
 });
@@ -23,16 +26,17 @@ const theme = createTheme({
 function App() {
   return (
     <BrowserRouter>
-    <ThemeProvider theme={theme}>
-   {/** */} 
-   <ResponsiveAppBar/>  
+      <ThemeProvider theme={theme}>
+        {/**  */}
+        <ResponsiveAppBar/>  
   
    <Profile />
    <About/>
-   <StickyFooter/>
   
-  </ThemeProvider>
-  </BrowserRouter>
+        <Experience />
+        <StickyFooter/>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 

@@ -15,7 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 
 
 
-const pages = ['Home', 'About Me', 'Experiences', 'Education', 'Projects', 'Skills', 'Contact Me'];
+const pages = ['Home', 'About Me', 'Experiences', 'Education', 'Projects', 'Skills'];
 
 
 function ResponsiveAppBar() {
