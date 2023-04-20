@@ -38,7 +38,7 @@ function ResponsiveAppBar() {
       <Container maxWidth="xl" >
         <Toolbar disableGutters>
 
-          <Face3Icon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: 'purple' }} />
+          <Face3Icon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: 'black' }} />
 
           <Typography
             variant="h5"
@@ -51,7 +51,7 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'purple',
+              color: 'black',
               textDecoration: 'none',
             }}
           >
@@ -126,7 +126,12 @@ function ResponsiveAppBar() {
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
-            <Chip label="Hire Me" variant="outlined" />
+            <Chip
+              label="Hire Me"
+              variant="outlined"
+              sx={{ color: 'black', borderColor: 'black', fontSize: '20px' }}
+            />
+
           </Box>
 
 

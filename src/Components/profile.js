@@ -29,7 +29,7 @@ export default function Profile() {
                 maxWidth: '100%',
                 height: '370px',
                 flexGrow: 1,
-                backgroundColor: '#ba55d3',
+                backgroundColor: 'black',
             }}
         >
             <Grid container spacing={2}>
@@ -44,7 +44,8 @@ export default function Profile() {
                             <Typography variant="h3" sx={{ color: 'WHITE', fontWeight: 'normal', mb: 3 }} >I'm</Typography>
                             <Typography variant="h1" component="h2" sx={{ color: 'primary.contrastText', textTransform: 'uppercase', mb: 2, WebkitTextStroke: '2px #ffffff' }}>Zineb Naciri</Typography>
                             <Typography variant="h1" component="h2" className="typed-text-output d-inline font-weight-lighter text-black"></Typography>
-                            <h2 color='white'>Full-Stack Developper</h2>
+                            <h2 style={{ color: 'white' }}>Full-Stack Developer</h2>
+
                         </Grid>
                         <Grid item>
                             <Button href="Zineb-Naciri-CV.pdf" download variant="outlined" sx={{ color: 'white', borderColor: 'white', mr: 5 }}>Download CV</Button>

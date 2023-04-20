@@ -7,6 +7,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter } from 'react-router-dom';
 
 import Profile from './Components/profile';
+import About from './Components/About';
 
 const theme = createTheme({
   palette: {
@@ -23,10 +24,13 @@ function App() {
   return (
     <BrowserRouter>
     <ThemeProvider theme={theme}>
-    <ResponsiveAppBar/>  
+   {/** */} 
+   <ResponsiveAppBar/>  
   
    <Profile />
+   <About/>
    <StickyFooter/>
+  
   </ThemeProvider>
   </BrowserRouter>
   );
