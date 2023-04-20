@@ -10,15 +10,17 @@ import Profile from './Components/profile';
 import About from './Components/About';
 
 
-import Experience from './Components/Experience';
+import Example from './Components/Experience';
+import Education from './Components/exp';
+import MainFeaturedPost from './Components/blog';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#d8bfd8', // Change the primary color to green
+      main: '#d8bfd8', 
     },
     secondary: {
-      main: '#7e21ce', // Change the secondary color to red
+      main: '#7e21ce', 
     },
   },
 });
@@ -27,13 +29,13 @@ function App() {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        {/**  */}
+        {/** <Profile />
+   <About/>
+  <Education /> */}
         <ResponsiveAppBar/>  
   
-   <Profile />
-   <About/>
-  
-        <Experience />
+   <MainFeaturedPost/>
+     
         <StickyFooter/>
       </ThemeProvider>
     </BrowserRouter>
