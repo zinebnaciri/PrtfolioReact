@@ -12,7 +12,8 @@ import About from './Components/About';
 
 import Example from './Components/Experience';
 import Education from './Components/exp';
-import MainFeaturedPost from './Components/blog';
+
+import FeaturedPost from './Components/blog';
 
 const theme = createTheme({
   palette: {
@@ -29,12 +30,13 @@ function App() {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        {/** <Profile />
+        {/** 
    <About/>
   <Education /> */}
         <ResponsiveAppBar/>  
-  
-   <MainFeaturedPost/>
+        <Profile />
+        <FeaturedPost/>
+ 
      
         <StickyFooter/>
       </ThemeProvider>

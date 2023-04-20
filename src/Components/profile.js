@@ -1,65 +1,76 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import ButtonBase from '@mui/material/ButtonBase';
+import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
 import profile from './img/profile.jpg';
-import { Button } from '@mui/material';
-import { Link } from 'react-router-dom';
 
-const Img = styled('img')({
+function Profile(props) {
 
-    marginLeft: '25px',
-    marginTop: '20px',
-    display: 'block',
-    maxWidth: '100%',
-    maxHeight: '100%',
-    borderRadius: '50%',
 
-});
+    const Img = styled('img')({
+        borderRadius: '50%',
+        display: 'inline-block',
+        maxWidth: '30%',
+        height: 'auto',
+    });
 
-export default function Profile() {
+
     return (
         <Paper
             sx={{
-                p: 2,
-                marginTop: '10px',
-                textAlign: 'center',
-                maxWidth: '100%',
-                height: '370px',
-                flexGrow: 1,
-                backgroundColor: 'black',
+                position: 'relative',
+                backgroundColor: 'grey.800',
+                color: '#fff',
+                mb: 4,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+
             }}
         >
-            <Grid container spacing={2}>
 
-                <Grid item xs={12} sm container>
-                    <Grid item>
-                        <ButtonBase sx={{ width: 300, height: 300 }}>
-                            <Img alt="Profile" src={profile} />
-                        </ButtonBase>
-                    </Grid>
-                    <Grid item xs container direction="column" spacing={2} sx={{}}>
+            <Box
+                sx={{
+                    position: 'absolute',
+                    top: 0,
+                    bottom: 0,
+                    right: 0,
+                    left: 0,
+                    backgroundColor: 'rgba(0,0,0,.3)',
+                 
+                }}
+            />
 
-                        <Grid item xs sx={{ textAlign: 'center' }}>
-                            <Typography variant="h3" sx={{ color: 'WHITE', fontWeight: 'normal', mb: 3 }} >I'm</Typography>
-                            <Typography variant="h1" component="h2" sx={{ color: 'primary.contrastText', textTransform: 'uppercase', mb: 2, WebkitTextStroke: '2px #ffffff' }}>Zineb Naciri</Typography>
-                            <Typography variant="h1" component="h2" className="typed-text-output d-inline font-weight-lighter text-black"></Typography>
-                            <h2 style={{ color: 'white' }}>Full-Stack Developer</h2>
-                        </Grid>
-
-
-                        <Grid item>
-                            <Button href="Zineb-Naciri-CV.pdf" download variant="outlined" sx={{ color: 'white', borderColor: 'white', mr: 5 }}>Download CV</Button>
-                            <Link to="/contact">
-                                <Button variant="outlined" sx={{ color: 'white', borderColor: 'white' }}>Contact Me</Button>
-                            </Link>
-                        </Grid>
-                    </Grid>
-
+            <Grid container>
+                <Grid item md={6}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: { xs: 'column', sm: 'row' },
+                            alignItems: 'center',
+                            p: { xs: 3, md: 6 },
+                            pr: { md: 0 },
+                        }}
+                    >
+                        <Img alt="Profile" src={profile} />
+                        <Box sx={{ ml: { xs: 0, sm: 3 } }}>
+                            <Typography component="h1" variant="h3" color="white" gutterBottom>
+                            Zineb Naciri
+                            </Typography>
+                            <Typography variant="h5" color="white" paragraph>
+                                Full-Stack Developer
+                            </Typography>
+                        </Box>
+                    </Box>
                 </Grid>
             </Grid>
+
         </Paper>
     );
 }
+
+
+
+export default Profile;

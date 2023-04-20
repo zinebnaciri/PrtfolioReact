@@ -1,75 +1,94 @@
-import * as React from 'react';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
+import React from 'react';
+import { Card, CardContent, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import profile from './img/profile.jpg';
+import theme from './theme';
+const Container = styled('div')({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexWrap: 'wrap',
+  gap: '20px',
+  padding: '20px',
+});
 
-function MainFeaturedPost(props) {
+const CardContainer = styled(Card)({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  textAlign: 'center',
+  height: '250px',
+  width: '250px',
+  padding: '20px',
+});
 
+const Example = () => {
+    
+  return (
+    <Container sx={{ position: 'relative' }}>
+    <Typography
+      variant="h1"
+      component="h1"
+      sx={{
+        position: 'absolute',
+        top: '10px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        color: 'primary.main',
+        textTransform: 'uppercase',
+        textAlign: 'center',
+        [theme.breakpoints.down('md')]: {
+          fontSize: '3rem',
+        },
+        [theme.breakpoints.down('sm')]: {
+          fontSize: '2rem',
+        },
+      }}
+    >
+      About Me
+    </Typography>
 
-    const Img = styled('img')({
-        borderRadius: '50%',
-        display: 'inline-block',
-        maxWidth: '20%',
-        height: 'auto',
-    });
+    <CardContainer>
+      <CardContent>
+        <Typography variant="h5" component="h2">
+          Card 1
+        </Typography>
+        <Typography variant="body2" component="p">
+          This is some text for card 1
+        </Typography>
+      </CardContent>
+    </CardContainer>
+    <CardContainer>
+      <CardContent>
+        <Typography variant="h5" component="h2">
+          Card 2
+        </Typography>
+        <Typography variant="body2" component="p">
+          This is some text for card 2
+        </Typography>
+      </CardContent>
+    </CardContainer>
+    <CardContainer>
+      <CardContent>
+        <Typography variant="h5" component="h2">
+          Card 3
+        </Typography>
+        <Typography variant="body2" component="p">
+          This is some text for card 3
+        </Typography>
+      </CardContent>
+    </CardContainer>
+    <CardContainer>
+      <CardContent>
+        <Typography variant="h5" component="h2">
+          Card 4
+        </Typography>
+        <Typography variant="body2" component="p">
+          This is some text for card 4
+        </Typography>
+      </CardContent>
+    </CardContainer>
+  </Container>
+);
+};
 
-
-    return (
-        <Paper
-            sx={{
-                position: 'relative',
-                backgroundColor: 'grey.800',
-                color: '#fff',
-                mb: 4,
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
-
-            }}
-        >
-
-            <Box
-                sx={{
-                    position: 'absolute',
-                    top: 0,
-                    bottom: 0,
-                    right: 0,
-                    left: 0,
-                    backgroundColor: 'rgba(0,0,0,.3)',
-                }}
-            />
-
-            <Grid container>
-                <Grid item md={6}>
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexDirection: { xs: 'column', sm: 'row' },
-                            alignItems: 'center',
-                            p: { xs: 3, md: 6 },
-                            pr: { md: 0 },
-                        }}
-                    >
-                        <Img alt="Profile" src={profile} />
-                        <Box sx={{ ml: { xs: 0, sm: 3 } }}>
-                            <Typography component="h1" variant="h3" color="WHITE" gutterBottom>
-                                I'm Zineb Naciri
-                            </Typography>
-                            <Typography variant="h5" color="WHITE" paragraph>
-                                Full-Stack Developer
-                            </Typography>
-                        </Box>
-                    </Box>
-                </Grid>
-            </Grid>
-
-        </Paper>
-    );
-}
-
-
-
-export default MainFeaturedPost;
+export default Example;
