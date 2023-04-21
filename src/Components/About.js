@@ -1,6 +1,8 @@
 import { Box, Button, Grid, Typography } from '@mui/material';
 import about from './img/about.jpg';
 import React from 'react';
+import BasicModal from './Modal';
+
 
 const About = () => {
   return (
@@ -57,12 +59,10 @@ const About = () => {
                   </Typography>
                 </Grid>
               </Grid>
-              <Button variant="outlined" color="primary" mr={2} href="#contact" style={{ marginRight: ' 50px' }}>
-                Contact Me
-              </Button>
-              <Button variant="outlined" color="primary" href="Zineb-Naciri-CV.pdf" download>
-                Download CV
-              </Button>
+             
+              <BasicModal/>
+            
+             
             </Grid>
           </Grid>
 

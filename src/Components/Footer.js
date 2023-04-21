@@ -9,6 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LocalMallRoundedIcon from '@mui/icons-material/LocalMallRounded';
 
+
 function Copyright() {
     return (
         <Typography variant="body2" color="black" align="center" fontSize="1rem" >

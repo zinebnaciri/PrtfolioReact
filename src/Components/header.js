@@ -14,15 +14,22 @@ import Paper from '@mui/material/Paper';
 
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
-
+import BasicModal from './Modal';
 import profile from './img/profile.jpg';
 
 import MenuItem from '@mui/material/MenuItem';
 
-
-
+import { Link } from 'react-router-dom';
+const pageLinks = {
+  Accueil: '/',
+  Experiences: '/Experience',
+  Formations: '/Education',
+  Certificats: './Certifications',
+  Projects: '/Projects',
+};
 
 const pages = ['Acceuil', 'Experiences', 'Formations', 'Certificats', 'Projects'];
+
 const Img = styled('img')({
   borderRadius: '50%',
   display: 'inline-block',
@@ -102,11 +109,13 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+            {Object.entries(pageLinks).map(([page, link]) => (
+  <MenuItem key={page} onClick={handleCloseNavMenu}>
+    <Link to={link} style={{ textDecoration: 'none', color: 'inherit' }}>
+      <Typography textAlign="center">{page}</Typography>
+    </Link>
+  </MenuItem>
+))}
             </Menu>
           </Box>
           <Face3Icon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -129,23 +138,18 @@ function ResponsiveAppBar() {
             Portfolio
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, alignItems: 'center', justifyContent: 'center' }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', fontSize: '1rem' }}
-              >
-                {page}
-              </Button>
-            ))}
+          {Object.entries(pageLinks).map(([page, link]) => (
+  <MenuItem key={page} onClick={handleCloseNavMenu}>
+    <Link to={link} style={{ textDecoration: 'none', color: 'inherit' }}>
+      <Typography textAlign="center">{page}</Typography>
+    </Link>
+  </MenuItem>
+))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
-            <Chip
-           
-              label="Contact Me"
-              variant="outlined"
-              sx={{ color: 'black', borderColor: 'black', fontSize: '20px' }}
-            />
+           <Button>
+              <BasicModal/>
+            </Button>
 
           </Box>
         </Toolbar>

@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import About from './Components/About';
 import MediaCard from './Components/Certifications';
 import Projects from './Components/Projects';
+import Contact from './Components/Contact';
 
 const theme = createTheme({
   palette: {
@@ -25,9 +26,8 @@ function App() {
       <ThemeProvider theme={theme}>
 
         <ResponsiveAppBar />
-      <Projects/>
-       
-     
+        <About />
+
         <StickyFooter />
       </ThemeProvider>
     </BrowserRouter>
