@@ -49,14 +49,14 @@ export default function StickyFooter() {
                 <Container maxWidth="sm">
                     <Box sx={{ display: 'flex', justifyContent: 'center', fontSize: '1rem' }}>
                         <IconButton
-                            href="https://github.com/your-github-username"
+                            href="https://github.com/zinebnaciri"
                             target="_blank"
                             rel="noopener"
                         >
                             <GitHubIcon />
                         </IconButton>
                         <IconButton
-                            href="https://facebook.com"
+                            href="https://www.linkedin.com/in/zineb-naciri-4b88a2218/"
                             target="_blank"
                             rel="noopener"
                         >
@@ -70,7 +70,7 @@ export default function StickyFooter() {
                             <InstagramIcon />
                         </IconButton>
                         <IconButton
-                            href="https://instagram.com"
+                            href="https://www.instagram.com/pristinegiftshop/"
                             target="_blank"
                             rel="noopener"
                         >

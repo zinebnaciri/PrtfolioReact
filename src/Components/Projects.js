@@ -4,12 +4,18 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box'
-import bootstrap from './img/bootstrap.PNG';
-import react from './img/react.PNG';
-import email from './img/email.PNG';
-import devops from './img/devops.PNG';
-import nodejs from './img/nodejs.PNG';
+import pharmacie from './img/11.png';
+import moogle from './img/moogle.png';
+import portfolio from './img/portfolio.PNG';
+import pristine from './img/pristine.PNG';
+import restaurant from './img/restaurant.PNG';
+import xo from './img/xo.PNG';
 import { styled } from '@mui/material/styles';
+import { CardActions, Button, Fab } from '@mui/material';
+import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
+function handleClick() {
+    window.location.href = 'https://github.com/zinebnaciri';
+}
 export default function Projects() {
     const Container = styled('div')({
         display: 'flex',
@@ -28,7 +34,7 @@ export default function Projects() {
                     textAlign: 'center',
                     fontSize: ['32px', '48px', '64px']
                 }}>
-                    Certificats
+                    Projects
                 </Typography>
             </Box>
 
@@ -36,50 +42,55 @@ export default function Projects() {
                 <Card sx={{ maxWidth: 345, height: 400 }}>
                     <CardMedia
                         sx={{ height: 250 }}
-                        image={bootstrap}
-                        title="bootstrap"
+                        image={pharmacie}
+                        title="pharmacie"
+                        
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                            Front-End Web UI Frameworksand Tools : Bootstrap4
+                            Gestion parapharmacie en C#
 
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            Coursera
-                        </Typography>
+
+                        <CardActions>
+                            <Button href="https://github.com/zinebnaciri/Gestion_Parapharmacie" size="small">Voir le Project</Button>
+
+                        </CardActions>
                     </CardContent>
 
                 </Card>
                 <Card sx={{ maxWidth: 345, height: 400 }}>
                     <CardMedia
                         sx={{ height: 250 }}
-                        image={react}
-                        title="react"
+                        image={moogle}
+                        title="records"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                            Front-End Web Development with React
+                            Gestion des Records en PHP
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" >
-                            Coursera
-                        </Typography>
+                        <CardActions>
+                            <Button href="https://github.com/zinebnaciri/WebApp" size="small">Voir le Project</Button>
+
+                        </CardActions>
                     </CardContent>
 
                 </Card>
                 <Card sx={{ maxWidth: 345, height: 400 }}>
                     <CardMedia
                         sx={{ height: 250 }}
-                        image={nodejs}
-                        title="nodejs"
+                        image={portfolio}
+                        title="portfolio"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                            Server-side Development with NodeJS, Express and MongoDB
+                            Portfolio en Bootstrap4 et Javascript
 
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" >
-                            Coursera
-                        </Typography>
+                        <CardActions>
+                            <Button href="https://zinebnaciri.vercel.app/" size="small">Voir le Project</Button>
+
+                        </CardActions>
                     </CardContent>
 
                 </Card>
@@ -89,40 +100,69 @@ export default function Projects() {
                 <Card sx={{ maxWidth: 345, height: 400 }}>
                     <CardMedia
                         sx={{ height: 250 }}
-                        image={email}
-                        title="email"
+                        image={restaurant}
+                        title="restaurant"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                            Certification for Email Marketing
+                            Gestion d'un restaurant en PHP
 
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            Sendinblue Academy
-                        </Typography>
+                        <CardActions>
+                            <Button href="https://github.com/zinebnaciri/webAppSystemToManageRestaurant" size="small">Voir le Project</Button>
+
+                        </CardActions>
                     </CardContent>
 
                 </Card>
                 <Card sx={{ maxWidth: 345, height: 400 }}>
                     <CardMedia
                         sx={{ height: 250 }}
-                        image={devops}
-                        title="devops"
+                        image={pristine}
+                        title="siteweb"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                            DevOps, Cloud, and Agile Foundations
+                            Site Web Restaurant HTML CSS
 
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" >
-                            Coursera
-                        </Typography>
+                        <CardActions>
+                            <Button href="https://github.com/zinebnaciri/restaurant_website" size="small">Voir le Project</Button>
+
+                        </CardActions>
                     </CardContent>
 
                 </Card>
 
+                <Card sx={{ maxWidth: 345, height: 400 }}>
+                    <CardMedia
+                        sx={{ height: 250 }}
+                        image={xo}
+                        title="game"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            Jeu de Morpion en React js
+
+                        </Typography>
+                        <CardActions>
+                            <Button href="https://tic-tac-toe-eta-roan.vercel.app/" size="small">Voir le Project</Button>
+
+                        </CardActions>
+                    </CardContent>
+
+                </Card>
 
             </Container>
+            <Box sx={{ textAlign: 'center', marginTop: '50px' }}>
+                <Fab variant="extended" onClick={handleClick}>
+                    <ArrowDropDownCircleIcon sx={{ mr: 1 }} />
+                    Voir Plus
+                </Fab>
+            </Box>
+
+
+
         </div>
     );
 }

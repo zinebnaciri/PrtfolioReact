@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import About from './Components/About';
 import MediaCard from './Components/Certifications';
+import Projects from './Components/Projects';
 
 const theme = createTheme({
   palette: {
@@ -24,9 +25,9 @@ function App() {
       <ThemeProvider theme={theme}>
 
         <ResponsiveAppBar />
-      
-        <About/>
-       <MediaCard/>
+      <Projects/>
+       
+     
         <StickyFooter />
       </ThemeProvider>
     </BrowserRouter>
