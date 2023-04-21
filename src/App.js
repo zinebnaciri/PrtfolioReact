@@ -3,7 +3,7 @@ import StickyFooter from './Components/Footer';
 import ResponsiveAppBar from './Components/header';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter } from 'react-router-dom';
-import Profile from './Components/profile';
+
 import About from './Components/About';
 import MediaCard from './Components/Certifications';
 
@@ -24,7 +24,7 @@ function App() {
       <ThemeProvider theme={theme}>
 
         <ResponsiveAppBar />
-        <Profile />
+      
         <About/>
        <MediaCard/>
         <StickyFooter />

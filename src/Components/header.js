@@ -10,13 +10,24 @@ import Container from '@mui/material/Container';
 import Face3Icon from '@mui/icons-material/Face3';
 import Button from '@mui/material/Button';
 import { Chip } from '@mui/material';
+import Paper from '@mui/material/Paper';
+
+import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';
+
+import profile from './img/profile.jpg';
 
 import MenuItem from '@mui/material/MenuItem';
 
 
 
 const pages = ['Acceuil', 'Experiences', 'Formations', 'Certificats', 'Projects', 'Skills'];
-
+const Img = styled('img')({
+  borderRadius: '50%',
+  display: 'inline-block',
+  maxWidth: '30%',
+  height: 'auto',
+});
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -34,6 +45,7 @@ function ResponsiveAppBar() {
 
 
   return (
+    <>
     <AppBar position="static">
       <Container maxWidth="xl" >
         <Toolbar disableGutters>
@@ -139,6 +151,57 @@ function ResponsiveAppBar() {
         </Toolbar>
       </Container>
     </AppBar>
+      <Paper
+      sx={{
+          position: 'relative',
+          backgroundColor: 'grey.800',
+          color: '#fff',
+          mb: 4,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+
+      }}
+  >
+
+      <Box
+          sx={{
+              position: 'absolute',
+              top: 0,
+              bottom: 0,
+              right: 0,
+              left: 0,
+              backgroundColor: 'rgba(0,0,0,.3)',
+
+          }}
+      />
+
+      <Grid container>
+          <Grid item md={6}>
+              <Box
+                  sx={{
+                      display: 'flex',
+                      flexDirection: { xs: 'column', sm: 'row' },
+                      alignItems: 'center',
+                      p: { xs: 3, md: 6 },
+                      pr: { md: 0 },
+                  }}
+              >
+                  <Img alt="Profile" src={profile} />
+                  <Box sx={{ ml: { xs: 0, sm: 3 } }}>
+                      <Typography component="h1" variant="h3" color="white" gutterBottom>
+                          Zineb Naciri
+                      </Typography>
+                      <Typography variant="h5" color="white" paragraph>
+                          Full-Stack Developer
+                      </Typography>
+                  </Box>
+              </Box>
+          </Grid>
+      </Grid>
+
+  </Paper>
+  </>
   );
 }
 export default ResponsiveAppBar;
