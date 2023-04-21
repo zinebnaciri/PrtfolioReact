@@ -39,7 +39,7 @@ function Profile(props) {
                     right: 0,
                     left: 0,
                     backgroundColor: 'rgba(0,0,0,.3)',
-                 
+
                 }}
             />
 
@@ -57,7 +57,7 @@ function Profile(props) {
                         <Img alt="Profile" src={profile} />
                         <Box sx={{ ml: { xs: 0, sm: 3 } }}>
                             <Typography component="h1" variant="h3" color="white" gutterBottom>
-                            Zineb Naciri
+                                Zineb Naciri
                             </Typography>
                             <Typography variant="h5" color="white" paragraph>
                                 Full-Stack Developer

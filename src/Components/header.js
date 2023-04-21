@@ -15,7 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 
 
 
-const pages = ['Home', 'About Me', 'Experiences', 'Education', 'Projects', 'Skills'];
+const pages = ['Acceuil', 'Experiences', 'Formations', 'Certificats', 'Projects', 'Skills'];
 
 
 function ResponsiveAppBar() {
@@ -127,7 +127,7 @@ function ResponsiveAppBar() {
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Chip
-              label="Hire Me"
+              label="Contact Me"
               variant="outlined"
               sx={{ color: 'black', borderColor: 'black', fontSize: '20px' }}
             />
