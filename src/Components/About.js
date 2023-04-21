@@ -27,6 +27,7 @@ const About = () => {
 
             </Grid>
             <Grid item xs={12} sm={6}>
+              
               <Typography variant="h3" mb={4}>
                 Full Stack Engineer
               </Typography>

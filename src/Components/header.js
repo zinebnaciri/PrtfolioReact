@@ -21,7 +21,8 @@ import MenuItem from '@mui/material/MenuItem';
 
 
 
-const pages = ['Acceuil', 'Experiences', 'Formations', 'Certificats', 'Projects', 'Skills'];
+
+const pages = ['Acceuil', 'Experiences', 'Formations', 'Certificats', 'Projects'];
 const Img = styled('img')({
   borderRadius: '50%',
   display: 'inline-block',
@@ -30,6 +31,7 @@ const Img = styled('img')({
 });
 
 function ResponsiveAppBar() {
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
 
@@ -139,15 +141,13 @@ function ResponsiveAppBar() {
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Chip
+           
               label="Contact Me"
               variant="outlined"
               sx={{ color: 'black', borderColor: 'black', fontSize: '20px' }}
             />
 
           </Box>
-
-
-
         </Toolbar>
       </Container>
     </AppBar>
@@ -192,15 +192,18 @@ function ResponsiveAppBar() {
                       <Typography component="h1" variant="h3" color="white" gutterBottom>
                           Zineb Naciri
                       </Typography>
-                      <Typography variant="h5" color="white" paragraph>
-                          Full-Stack Developer
-                      </Typography>
+                    <Typography component="h2" variant="h4" color="white" gutterBottom>
+                 Full-Stack Developper
+                    </Typography>
+              
+      
                   </Box>
               </Box>
           </Grid>
       </Grid>
 
   </Paper>
+ 
   </>
   );
 }
