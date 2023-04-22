@@ -2,10 +2,11 @@ import { Box, Button, Grid, Typography } from '@mui/material';
 import about from './img/profile.jpg';
 import React from 'react';
 import BasicModal from './Modal';
+import resume from './pdf/ZinebNaciri.pdf'
 
 const About = () => {
   return (
-    <Box sx={{ py: 5, backgroundColor: 'white' ,margin :'20px'}} id="about">
+    <Box sx={{ py: 5, backgroundColor: 'white', margin: '20px' }} id="about">
       <Grid container justifyContent="center">
         <Grid item xs={12} sm={10} md={8}>
           <Box sx={{ maxWidth: '100%', width: '100%', display: 'flex', justifyContent: 'center' }}>
@@ -21,7 +22,7 @@ const About = () => {
           <Grid container alignItems="center" mt={8}>
             <Grid item xs={12} sm={6} mb={4} mb-sm={0}>
               <Box sx={{ maxWidth: '100%', height: 'auto' }}>
-                <img src={about} alt="about" style={{ width: '100%', maxWidth: '470px', height: 'auto', borderRadius:'50%' }} />
+                <img src={about} alt="about" style={{ width: '100%', maxWidth: '470px', height: 'auto', borderRadius: '50%' }} />
               </Box>
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -55,9 +56,17 @@ const About = () => {
                   </Typography>
                 </Grid>
               </Grid>
-              <Box sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
-                <BasicModal/>
-              </Box>
+              <Grid container spacing={1}>
+                <Grid item xs={12} sm={6} textAlign="center">
+                  <BasicModal />
+                </Grid>
+                <Grid item xs={12} sm={6} textAlign="center">
+                  <a href={resume} download="cv">
+                <Button sx={{color:'black', borderWidth:'1px', borderColor:'black', borderRadius: '15px', borderStyle: 'solid'}} >Download CV</Button>
+                </a>
+                </Grid>
+              </Grid>
+
             </Grid>
           </Grid>
         </Grid>
