@@ -2,7 +2,7 @@ import './App.css';
 import StickyFooter from './Components/Footer';
 import ResponsiveAppBar from './Components/header';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { BrowserRouter,Routes,Router,Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Router, Route } from 'react-router-dom';
 
 
 import About from './Components/About';
@@ -27,27 +27,21 @@ const theme = createTheme({
 
 function App() {
   return (
-   <BrowserRouter>
+    <BrowserRouter>
       <ThemeProvider theme={theme}>
-     
-      <Navbar/>
-     <Routes>
-          
-                <Route exact path="/" element ={<About/>}/>
-                     <Route exact path="/experience" element={<Experience/>}/>
-                     <Route exact path="/formations" element={<Education/>}/>
-                     <Route exact path="/certifs" element={<MediaCard/>}/>
-                     <Route exact path="/projets" element={<Projects />}/>
-                     
-             
-                
-                    
 
-              
-                     </Routes> 
-            
+        <Navbar />
+        <Routes>
+
+          <Route exact path="/" element={<About />} />
+          <Route exact path="/experience" element={<Experience />} />
+          <Route exact path="/formations" element={<Education />} />
+          <Route exact path="/certifs" element={<MediaCard />} />
+          <Route exact path="/projets" element={<Projects />} />
+        </Routes>
+        <StickyFooter />
       </ThemeProvider>
-      </BrowserRouter>
+    </BrowserRouter>
   );
 }
 

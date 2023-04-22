@@ -27,14 +27,14 @@ export default function Projects() {
     });
     return (
         <div>
-            <Box sx={{ maxWidth: '100%', width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <Box sx={{ maxWidth: '100%', width: '100%', display: 'flex', justifyContent: 'center',marginTop:'40px' }}>
                 <Typography variant="h1" component="h1" sx={{
                     color: 'primary.main',
                     textTransform: 'uppercase',
                     textAlign: 'center',
                     fontSize: ['32px', '48px', '64px']
                 }}>
-                    Projects
+                    Projets
                 </Typography>
             </Box>
 

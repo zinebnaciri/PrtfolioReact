@@ -23,7 +23,7 @@ const CardContainer = styled(Card)({
 const Education = () => {
     return (
         <div>
-            <Box sx={{ maxWidth: '100%', width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <Box sx={{ maxWidth: '100%', width: '100%', display: 'flex', justifyContent: 'center',marginTop:'40px' }}>
                 <Typography variant="h1" component="h1" sx={{
                     color: 'primary.main',
                     textTransform: 'uppercase',

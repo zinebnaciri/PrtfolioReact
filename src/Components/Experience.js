@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Typography } from '@mui/material';
+import { Box, Card, CardContent, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 const Container = styled('div')({
@@ -22,9 +22,16 @@ const CardContainer = styled(Card)({
 
 const Experience = () => {
     return (
-        <div><Typography variant="h1" component="h1" sx={{ color: 'primary.main', textTransform: 'uppercase', textAlign: 'center' }}>
-            Experiences
-        </Typography>
+        <div>
+             <Box sx={{ maxWidth: '100%', width: '100%', display: 'flex', justifyContent: 'center',marginTop:'40px' }}>
+            <Typography variant="h1" component="h1" sx={{
+              color: 'primary.main',
+              textTransform: 'uppercase',
+              textAlign: 'center',
+              fontSize: ['32px', '48px', '64px']
+            }}>
+             Experience
+            </Typography></Box>
             <Container>
                 <CardContainer>
                     <CardContent>
