@@ -24,12 +24,11 @@ const pageLinks = {
   Accueil: '/',
   Experiences: '/Experience',
   Formations: '/Education',
-  Certificats: './Certifications',
+  Certificats: '/Certifications',
   Projects: '/Projects',
 };
 
 const pages = ['Acceuil', 'Experiences', 'Formations', 'Certificats', 'Projects'];
-
 const Img = styled('img')({
   borderRadius: '50%',
   display: 'inline-block',
@@ -109,13 +108,14 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-            {Object.entries(pageLinks).map(([page, link]) => (
+            {pages.map((page) => (
   <MenuItem key={page} onClick={handleCloseNavMenu}>
-    <Link to={link} style={{ textDecoration: 'none', color: 'inherit' }}>
+    <Link to={pageLinks[page]} style={{ textDecoration: 'none', color: 'inherit' }}>
       <Typography textAlign="center">{page}</Typography>
     </Link>
   </MenuItem>
 ))}
+
             </Menu>
           </Box>
           <Face3Icon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -138,13 +138,14 @@ function ResponsiveAppBar() {
             Portfolio
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, alignItems: 'center', justifyContent: 'center' }}>
-          {Object.entries(pageLinks).map(([page, link]) => (
+          {pages.map((page) => (
   <MenuItem key={page} onClick={handleCloseNavMenu}>
-    <Link to={link} style={{ textDecoration: 'none', color: 'inherit' }}>
+    <Link to={pageLinks[page]} style={{ textDecoration: 'none', color: 'inherit' }}>
       <Typography textAlign="center">{page}</Typography>
     </Link>
   </MenuItem>
 ))}
+
           </Box>
           <Box sx={{ flexGrow: 0 }}>
            <Button>

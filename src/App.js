@@ -2,12 +2,17 @@ import './App.css';
 import StickyFooter from './Components/Footer';
 import ResponsiveAppBar from './Components/header';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter,Routes,Router,Route } from 'react-router-dom';
+
 
 import About from './Components/About';
 import MediaCard from './Components/Certifications';
 import Projects from './Components/Projects';
-import Contact from './Components/Contact';
+
+import Navbar from './Components/navbar';
+import Education from './Components/Eductation';
+import Experience from './Components/Experience';
+
 
 const theme = createTheme({
   palette: {
@@ -22,15 +27,27 @@ const theme = createTheme({
 
 function App() {
   return (
-    <BrowserRouter>
+   <BrowserRouter>
       <ThemeProvider theme={theme}>
+     
+      <Navbar/>
+     <Routes>
+          
+                <Route exact path="/" element ={<About/>}/>
+                     <Route exact path="/experience" element={<Experience/>}/>
+                     <Route exact path="/formations" element={<Education/>}/>
+                     <Route exact path="/certifs" element={<MediaCard/>}/>
+                     <Route exact path="/projets" element={<Projects />}/>
+                     
+             
+                
+                    
 
-        <ResponsiveAppBar />
-        <About />
-
-        <StickyFooter />
+              
+                     </Routes> 
+            
       </ThemeProvider>
-    </BrowserRouter>
+      </BrowserRouter>
   );
 }
 
