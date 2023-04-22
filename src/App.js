@@ -1,8 +1,8 @@
 import './App.css';
 import StickyFooter from './Components/Footer';
-import ResponsiveAppBar from './Components/header';
+
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { BrowserRouter, Routes, Router, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 import About from './Components/About';
