@@ -22,8 +22,9 @@ const Navbar = () => {
                 <h3 className="logo">Portfolio</h3>
                 <ul className={Mobile? "nav-links-mobile": "nav-links"} onClick={()=> setMobile(false)}>
                     <Link to='/'> <li>Acceuil</li></Link>
-                    <Link to='/experience'> <li>Experience</li></Link>
                     <Link to='/formations'> <li>Formations</li></Link>
+                    <Link to='/experience'> <li>Experience</li></Link>
+                    
                     <Link to='/certifs'> <li>Certificats</li></Link>
                     <Link to='/projets'> <li>Projects</li></Link>
                 </ul>

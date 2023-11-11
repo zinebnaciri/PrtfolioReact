@@ -9,6 +9,7 @@ import react from './img/react.PNG';
 import email from './img/email.PNG';
 import devops from './img/devops.PNG';
 import nodejs from './img/nodejs.PNG';
+import cloud from './img/Capturescloud.PNG'
 import { styled } from '@mui/material/styles';
 export default function MediaCard() {
     const Container = styled('div')({
@@ -33,6 +34,23 @@ export default function MediaCard() {
             </Box>
 
             <Container>
+            <Card sx={{ maxWidth: 345, height: 400 }}>
+                    <CardMedia
+                        sx={{ height: 250 }}
+                        image={cloud}
+                        title="cloud"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                        Building Scalable Java Microservices with Spring
+Boot and Spring Cloud
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            Coursera
+                        </Typography>
+                    </CardContent>
+
+                </Card>
                 <Card sx={{ maxWidth: 345, height: 400 }}>
                     <CardMedia
                         sx={{ height: 250 }}
@@ -66,7 +84,11 @@ export default function MediaCard() {
                     </CardContent>
 
                 </Card>
-                <Card sx={{ maxWidth: 345, height: 400 }}>
+               
+
+            </Container>
+            <Container>
+            <Card sx={{ maxWidth: 345, height: 400 }}>
                     <CardMedia
                         sx={{ height: 250 }}
                         image={nodejs}
@@ -83,9 +105,6 @@ export default function MediaCard() {
                     </CardContent>
 
                 </Card>
-
-            </Container>
-            <Container>
                 <Card sx={{ maxWidth: 345, height: 400 }}>
                     <CardMedia
                         sx={{ height: 250 }}

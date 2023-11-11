@@ -6,8 +6,8 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box'
 import pharmacie from './img/11.png';
 import moogle from './img/moogle.png';
-import portfolio from './img/portfolio.PNG';
-import pristine from './img/pristine.PNG';
+import pharm from './img/pharm.PNG';
+import exam from './img/exam.PNG';
 import restaurant from './img/restaurant.PNG';
 import xo from './img/xo.PNG';
 import { styled } from '@mui/material/styles';
@@ -79,16 +79,15 @@ export default function Projects() {
                 <Card sx={{ maxWidth: 345, height: 400 }}>
                     <CardMedia
                         sx={{ height: 250 }}
-                        image={portfolio}
-                        title="portfolio"
+                        image={pharm}
+                        title="pharm"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                            Portfolio en Bootstrap4 et Javascript
-
+                           Localisation des pharmacies en SpringBoot et React
                         </Typography>
                         <CardActions>
-                            <Button href="https://zinebnaciri.vercel.app/" size="small">Voir le Project</Button>
+                            <Button href="https://github.com/zinebnaciri/pharmacie-front-end.git" size="small">Voir le Project</Button>
 
                         </CardActions>
                     </CardContent>
@@ -118,16 +117,17 @@ export default function Projects() {
                 <Card sx={{ maxWidth: 345, height: 400 }}>
                     <CardMedia
                         sx={{ height: 250 }}
-                        image={pristine}
-                        title="siteweb"
+                        image={exam}
+                        title="exam"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                            Site Web Restaurant HTML CSS
+                          Plannification des examens en SpringBoot et React
+
 
                         </Typography>
                         <CardActions>
-                            <Button href="https://github.com/zinebnaciri/restaurant_website" size="small">Voir le Project</Button>
+                            <Button href="https://github.com/zinebnaciri/calendarFrontend.git" size="small">Voir le Project</Button>
 
                         </CardActions>
                     </CardContent>

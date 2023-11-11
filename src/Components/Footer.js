@@ -63,13 +63,7 @@ export default function StickyFooter() {
                         >
                             <LinkedInIcon />
                         </IconButton>
-                        <IconButton
-                            href="https://instagram.com"
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            <InstagramIcon />
-                        </IconButton>
+                       
                         <IconButton
                             href="https://pristinegiftshop.vercel.app/"
                             target="_blank"

@@ -37,8 +37,7 @@ const Education = () => {
                 <CardContainer>
                     <CardContent>
                         <Typography variant="h5" component="h2" sx={{ textAlign: 'left', marginBottom: '5px' }}>
-                            Bac + 4 en ingénierie informatique et réseau
-                        </Typography>
+                        3eme année cycle d’ingenieur en informatique et reseaux option MIAGE                        </Typography>
 
                         <Typography variant="body2" component="p" sx={{ textAlign: 'left', marginBottom: '5px' }}>
                             EMSI- Ecole marocaine des sciences de l'ingénieur,
@@ -52,8 +51,7 @@ const Education = () => {
                 <CardContainer >
                     <CardContent>
                         <Typography variant="h5" component="h2" sx={{ textAlign: 'left', marginBottom: '5px' }}>
-                            Bac+3 en Génie informatique
-
+                        Licence en génie informatique option MIAGE
 
                         </Typography>
 
@@ -71,7 +69,7 @@ const Education = () => {
                 <CardContainer >
                     <CardContent>
                         <Typography variant="h5" component="h2" sx={{ textAlign: 'left', marginBottom: '5px' }}>
-                            Bac scientifique option physique et chimie
+                            Bac scientifique option physique et chimie - mention très bien
 
                         </Typography>
 

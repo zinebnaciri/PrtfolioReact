@@ -2,7 +2,7 @@ import { Box, Button, Grid, Typography } from '@mui/material';
 import about from './img/profile.jpg';
 import React from 'react';
 import BasicModal from './Modal';
-import resume from './pdf/ZinebNaciri.pdf'
+import resume from './pdf/ZinebNaciri-CV.pdf'
 
 const About = () => {
   return (
@@ -36,31 +36,24 @@ const About = () => {
               </Box>
               <Grid container spacing={2} sx={{ justifyContent: { xs: 'center', sm: 'left' } }}>
                 <Grid item xs={12} sm={6} mb={2}>
-                  <Typography variant="h6" component="h6">
-                    Name: <span style={{ color: '#6c757d' }}>Zineb Naciri</span>
+                  <Typography variant="h7" component="h7">
+                    Name: <span style={{ color: '#6c757d'}}>Zineb Naciri</span>
                   </Typography>
                 </Grid>
-                <Grid item xs={12} sm={6} mb={2}>
-                  <Typography variant="h6" component="h6">
-                    Degree: <span style={{ color: '#6c757d' }}>Master</span>
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6} mb={2}>
-                  <Typography variant="h6" component="h6">
+                
+                <Grid item xs={12} sm={10} mb={2}>
+                  <Typography variant="h7" component="h7">
                     Email: <span style={{ color: '#6c757d' }}>zineb.naciri02@gmail.com</span>
                   </Typography>
                 </Grid>
-                <Grid item xs={12} sm={6} mb={2}>
-                  <Typography variant="h6" component="h6">
-                    Freelance: <span style={{ color: '#6c757d' }}>Available</span>
-                  </Typography>
-                </Grid>
+                
               </Grid>
-              <Grid container spacing={1}>
-                <Grid item xs={12} sm={6} textAlign="center">
+
+              <Grid container spacing={2}>
+                <Grid item xs={12} sm={6} textAlign="center" marginTop={1}>
                   <BasicModal />
                 </Grid>
-                <Grid item xs={12} sm={6} textAlign="center">
+                <Grid item xs={12} sm={6} textAlign="center"marginTop={1}>
                   <a href={resume} download="cv">
                 <Button sx={{color:'black', borderWidth:'1px', borderColor:'black', borderRadius: '15px', borderStyle: 'solid'}} >Download CV</Button>
                 </a>
